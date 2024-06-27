@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #00e1ff;
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --instagram-color: #E4405F;
+    --linkedin-color: #0077B5;
+    --facebook-color: #1877F2;
+    --link-color: #0000EE;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+.menu-icon {
+    display: none;
+}
+
+section {
+    padding: 3em 2em;
+    text-align: center;
+}
+
+#home {
+    background: var(--background-color);
+    padding-top: 5em;
+}
+
+#home .profile-pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#home .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#about, #projects, #contact {
+    background: var(--background-color);
+    padding-top: 0em;
+}
+
+#projects a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+#contact a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.5em;
+    transition: color 0.3s ease;
+}
+
+#contact a i {
+    margin-right: 0.5em;
+}
+
+#contact a.instagram-link {
+    color: var(--instagram-color);
+}
+
+#contact a.linkedin-link {
+    color: var(--linkedin-color);
+}
+
+#contact a.facebook-link {
+    color: var(--facebook-color);
+}
+
+#contact a.social-link {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+#contact a:hover {
+    color: #333;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .menu-icon span {
+        font-size: 2em;
+    }
+
+    nav ul.menu-open {
+        display: flex;
+    }
+}
